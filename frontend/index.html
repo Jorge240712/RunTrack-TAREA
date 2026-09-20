@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunTrack — Edición de Autor</title>
+    <meta name="description" content="RunTrack, una bitácora de carreras con estilo personal y diseño premium.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-glow page-glow-1"></div>
+    <div class="page-glow page-glow-2"></div>
+
+    <main class="app-shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark">🏃</div>
+                <div>
+                    <p class="eyebrow">Running journal</p>
+                    <h1>RunTrack</h1>
+                </div>
+            </div>
+            <div class="status-pill">Edición personal</div>
+        </header>
+
+        <section class="content-grid">
+            <section class="panel form-panel">
+                <div class="section-heading">
+                    <p class="mini-label">Nueva sesión</p>
+                    <h2>Registrar carrera</h2>
+                </div>
+
+                <form id="formCarrera">
+                    <div class="field-group">
+                        <label for="inputFecha">Fecha</label>
+                        <input type="date" id="inputFecha" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="inputDistancia">Distancia</label>
+                        <input type="number" id="inputDistancia" step="0.1" placeholder="Ej: 5.2 km" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="inputDuracion">Duración</label>
+                        <input type="number" id="inputDuracion" placeholder="Ej: 32 min" required>
+                    </div>
+
+                    <button type="submit">Registrar carrera</button>
+                </form>
+
+                <p id="mensajeEstado" aria-live="polite"></p>
+            </section>
+
+            <aside class="panel overview-panel">
+                <div class="section-heading compact">
+                    <p class="mini-label">Resumen</p>
+                    <h2>Tu semana</h2>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-label">Ritmo</span>
+                        <strong>4:58</strong>
+                        <small>min/km</small>
+                    </div>
+                    <div class="stat-card accent">
+                        <span class="stat-label">Kilómetros</span>
+                        <strong>18.4</strong>
+                        <small>totales</small>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    <span>“La constancia no se ve en una sola carrera, sino en todas las que vuelven.”</span>
+                </div>
+            </aside>
+        </section>
+
+        <section class="panel records-panel">
+            <div class="section-heading inline">
+                <div>
+                    <p class="mini-label">Historial</p>
+                    <h2>Mis carreras</h2>
+                </div>
+            </div>
+
+            <div id="listaCarreras">
+                <p class="vacio">Cargando carreras...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
